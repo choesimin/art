@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head lang="ko">
+    <meta charset="utf-8">
     <style>
         html,
         body {
@@ -9,21 +10,71 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            background-color: black;
         }
 
         div {
             position: absolute;
+            z-index: 0;
             width: 1px;
             height: 100%;
             transition: 4s;
+        }
+
+        main {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: scroll;
+        }
+        
+        article {
+            color: white;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
+    <main>
+        <article>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h1>벽에 혈관이 있다</h1>
+            <br>
+            <br>
+            <p>원래 이런 게 있었나</p>
+            <p>주변이 온통 빨갛다</p>
+            <br>
+            <p>울컥</p>
+            <p>울컥</p>
+            <p>대량의 피 움직이고</p>
+            <p>벽은 점점 내게로</p>
+            <br>
+            <p>다가오시는구나</p>
+            <p>죄여오시는구나</p>
+            <p>포옹인지 고통인지</p>
+            <p>난 몰라</p>
+            <br>
+            <p>샛파랗게 갈아낸</p>
+            <p>이성</p>
+            <p>가른다</p>
+            <p>혈관</p>
+            <br>
+            <p>스윽</p>
+
+            <br>
+            <br>
+            <br>
+            <br>
+        </article>
+    </main>
+
     <script>
-        const body = document.body;
         let divisions = [];
 
         setDivisions();
@@ -34,7 +85,7 @@
             for (let x = 0; x < window.innerWidth; x++) {
                 const division = document.createElement('div');
                 division.style.left = x + 'px';
-                body.append(division);
+                document.body.append(division);
                 divisions.push(division);
             }
         }
