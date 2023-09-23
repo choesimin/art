@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ko">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>적당히 적당하기</h1>
+    <br>
+    <br>
+    <br>
+    <p>"뭐든 적당한 게 좋아"</p>
+    <br>
+
+    <script>
+        let count = 0;
+        const word = '적당히 하는 것을 ';
+        setInterval(async function () {
+            const so = document.createElement('p');
+            so.innerText = '그래서 ' + word.repeat(count) + '적당히 했다.';
+            document.body.appendChild(so);
+
+            const but = document.createElement('p');
+            but.innerText = '근데 ' + word.repeat(count) + '너무 적당히 했다.';
+            document.body.appendChild(but);
+
+            const br = document.createElement('br');
+            document.body.appendChild(br);
+
+            count = count + 1;
+        }, 1000);
+    </script>
+</body>
+
+</html>
