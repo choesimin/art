@@ -100,6 +100,24 @@
         setColor();
         setInterval(setColor, 500);
 
+        const text = document.getElementsByTagName('article')[0];
+        text.style.transition = '0.5s';
+
+        const beat = setInterval(function () {
+            text.style.opacity = 0.9;
+            setTimeout(function () {
+                text.style.opacity = 1;
+            }, 900);
+        }, 1200);
+
+        setTimeout(function () {
+            clearInterval(beat);
+            setTimeout(function () {
+                text.style.opacity = 0;
+            }, 1000);
+        }, 60000);
+
+
         function setDivisions() {
             for (let x = 0; x < window.innerWidth; x++) {
                 const division = document.createElement('div');
