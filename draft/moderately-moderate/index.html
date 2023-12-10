@@ -19,41 +19,7 @@
 </head>
 
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1>적당히 적당하기</h1>
-    <br>
-    <br>
-    <p>
-        인생의 선배님들이 나에게 말했다.
-        <br><br>
-        "넌 항상 과해."
-        <br><br>
-        "뭐든 적당한 게 좋아."
-        <br><br><br><br>
-        맞는 말 같았다.
-    </p>
     <p id="content"></p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <script>
         String.prototype.toKorChars = function () {
@@ -117,15 +83,15 @@
         }
 
         function makeText() {
-            let text = '';
+            let text = '"적당히 좀 해."';
             const word = '적당히 하는 것을 ';
-            for (let i = 0; i < 1000; i++) text += '\n\n\n\n그래서 ' + word.repeat(i) + '적당히 했다.\n\n근데 ' + word.repeat(i) + '너무 적당히 했다.';
+            for (let i = 0; i < 1000; i++) text += '\n\n\n그래서 ' + word.repeat(i) + '적당히 했다.\n\n그런데 ' + word.repeat(i) + '너무 적당히 했다.';
             return text;
         }
         
         setTimeout(() => {
             type(document.getElementById('content'), makeText());
-        }, 1000);
+        }, 500);
 
     </script>
 
